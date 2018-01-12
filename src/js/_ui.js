@@ -34,7 +34,7 @@ function goToSleep() {
 
 function wakeUp() {
   screensaver.stop();
-  location.reload();
+  window.location.href = '/'; // go home
 }
 
 function asyncInit() {
