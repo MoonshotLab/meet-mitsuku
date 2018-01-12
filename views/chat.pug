@@ -1,0 +1,13 @@
+extends partials/mitsuku-template.pug
+
+block left_content
+  div#mitsuku-chat
+    h1.big <span class="lt-blue">Mitsuku</span> <span class="white">Chat</span>
+  div#embedded-chat
+    div#iframe-wrap
+      iframe(src="https://kakko.pandorabots.com/pandora/talk?botid=87437a824e345a0d&skin=barkley")
+
+block footer_scripts
+  script(src='js/lib/jquery.min.js')
+  script(src='https://download.affectiva.com/js/3.2/affdex.js')
+  script(src='js/main.bundle.js')

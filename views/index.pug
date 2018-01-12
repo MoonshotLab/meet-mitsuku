@@ -1,0 +1,18 @@
+extends partials/mitsuku-template.pug
+
+block left_content
+  div#meet-mitsuku-wrap
+    h1.big <span class="white">Meet</span> <span class="lt-blue">Mitsuku</span>
+    hr.thick
+    p.lt-blue The famed chatbot Mitsuku is the 3-time winner of the Loebner Prize, given to the most "humanlike" robot. <br><span class="white">Just click Start</span> and begin your conversation.
+  div#start-button-wrap
+    a#start-button(href="/chat")
+      img(src='/img/start-button.gif')
+      h3#button-text.mid-gray Start
+  div#fine-print-wrap
+    p.lt-gray Mitsuku was created by British developer Steve Worswick.<br>She is hosted by Pandorabots, her user name on Kik and Facebook.<br>There's also a Flash game on the Mousebreaker.com game site based on Mitsuku.
+
+block footer_scripts
+  script(src='js/lib/jquery.min.js')
+  script(src='https://download.affectiva.com/js/3.2/affdex.js')
+  script(src='js/main.bundle.js')

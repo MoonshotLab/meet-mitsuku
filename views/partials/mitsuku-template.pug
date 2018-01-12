@@ -1,0 +1,23 @@
+extends ../layout.pug
+
+block content
+  div#wrapper
+    div#main-content-wrap
+      div#main-content
+        div#left-content
+          block left_content
+        div#graphic
+          img(src='/img/bubbles.png')
+  div#home-button-wrap
+    a(href='/')
+      img(src='/img/home-button.png')
+  div#video-wrap
+    video
+      source(src='https://d32vnycoqqt3qz.cloudfront.net/loops/mitsuku-loop-simple.mp4', type='video/mp4', loop)
+      source(src='https://d32vnycoqqt3qz.cloudfront.net/loops/mitsuku-loop-simple.webm', type='video/webm', loop)
+  div#camera-root
+
+block footer_scripts
+  script(src='js/lib/jquery.min.js')
+  script(src='https://download.affectiva.com/js/3.2/affdex.js')
+  script(src='js/main.bundle.js')

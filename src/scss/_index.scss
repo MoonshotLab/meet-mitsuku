@@ -1,0 +1,203 @@
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+  font-family: 'calluna-sans', sans-serif;
+  color: $white;
+  height: 100vh;
+  width: 100vw;
+  // background: pink;
+  background-color: $darkGray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+#camera-root {
+  display: none;
+}
+
+#home-button-wrap {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+
+  a {
+    display: block;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+hr {
+  &.thick {
+    border: none;
+    border-top: 10px solid $lightGray;
+  }
+}
+
+h1.big {
+  font-size: 5em;
+  margin-bottom: 0.5rem;
+}
+
+body {
+  section {
+    padding: 2.5%;
+  }
+
+  main {
+    max-width: 1700px;
+    max-height: 850px;
+    margin: 0 auto;
+  }
+
+  main,
+  #wrapper {
+    height: 100%;
+  }
+
+  main {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #wrapper {
+    background-color: $darkGray;
+    margin: auto;
+    overflow: hidden;
+    // max-height: 700px;
+    // max-width: 1351px;
+    padding: 0% 4%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 70% 15%;
+    grid-template-areas:
+      '.'
+      'main-content'
+      '.';
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.5em;
+    }
+  }
+
+  #main-content-wrap {
+    grid-area: main-content;
+    height: 100%;
+  }
+
+  #main-content {
+    height: 100%;
+    width: 100%;
+  }
+
+  #left-content,
+  #graphic {
+    width: 50%;
+    float: left;
+    padding: 2%;
+    height: 100%;
+  }
+
+  #left-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  #meet-mitsuku-wrap {
+    margin-top: 5%;
+
+    hr {
+      width: 80%;
+      margin-left: 0;
+      margin: 1em auto 1em 0;
+    }
+
+    p {
+      font-size: 18px;
+      width: 90%;
+    }
+  }
+
+  #fine-print-wrap {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  #graphic {
+    img {
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  #start-button-wrap {
+    width: 20%;
+    cursor: pointer;
+
+    #start-button {
+      display: block;
+    }
+
+    img,
+    #button-text {
+      position: relative;
+      display: block;
+    }
+
+    #button-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+  }
+
+  #mitsuku-chat {
+    height: 20%;
+  }
+
+  #embedded-chat {
+    height: 80%;
+
+    #iframe-wrap {
+      height: 100%;
+      border-radius: 25px;
+      overflow: hidden;
+      background: $lightGray;
+      padding: 10px;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
