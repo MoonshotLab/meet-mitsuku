@@ -7,7 +7,7 @@ const $cameraRoot = $('#camera-root');
 let $cameraCanvas;
 
 let screensaverTimeout = null;
-let screensaverTimeoutLength = 10 * 1000; // ms
+let screensaverTimeoutLength = 30 * 1000; // ms
 
 // prevent screensaver on every user action
 function setupActivityWake() {
