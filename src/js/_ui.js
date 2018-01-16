@@ -7,7 +7,7 @@ const $cameraRoot = $('#camera-root');
 let $cameraCanvas;
 
 let screensaverTimeout = null;
-let screensaverTimeoutLength = 2.5 * 60 * 1000; // ms
+let screensaverTimeoutLength = 5 * 60 * 1000; // ms
 
 // prevent screensaver on every user action
 function setupActivityWake() {
@@ -41,6 +41,7 @@ function asyncInit() {
   return new Promise((resolve, reject) => {
     try {
       setupActivityWake();
+
       video
         .asyncSetupCamera($cameraRoot)
         .then(video.startWatching)
