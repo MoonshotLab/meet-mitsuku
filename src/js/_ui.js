@@ -13,6 +13,15 @@ let screensaverTimeoutLength = 5 * 60 * 1000; // ms
 function setupActivityWake() {
   $(window).on('keydown mousemove mousedown', function(e) {
     keepAlive();
+
+    try {
+      // if spacebar on the main page, go to chat
+      if (window.location.pathname !== '/chat' && e.keyCode === 32) {
+        window.location.href = '/chat';
+      }
+    } catch (e) {
+      // noop (we only care about when the event is successful)
+    }
   });
 }
 
