@@ -15,9 +15,12 @@ function setupActivityWake() {
     keepAlive();
 
     try {
-      // if spacebar on the main page, go to chat
       if (window.location.pathname !== '/chat' && e.keyCode === 32) {
+        // if spacebar on the main page, go to chat
         window.location.href = '/chat';
+      } else if (window.location.pathname === '/chat' && e.keyCode === 27) {
+        // if esc on chat, go to the main page
+        window.location.href = '/';
       }
     } catch (e) {
       // noop (we only care about when the event is successful)
