@@ -4,7 +4,6 @@ const ui = require('./_ui');
 
 let detector;
 let detectorRunning = false;
-let faceInFrame = false;
 let frames = 0;
 
 function hookUpDetectorEvents(detector) {
@@ -26,19 +25,13 @@ function hookUpDetectorEvents(detector) {
     image,
     timestamp
   ) {
-    frames++;
     if (frames % 5 === 0) {
       if (faces.length > 0) {
         ui.keepAlive();
-        if (faceInFrame !== true) {
-          faceInFrame = true;
-        }
-      } else {
-        if (faceInFrame === true) {
-          faceInFrame = false;
-        }
       }
     }
+
+    if (frames++ > 100) frames = 0;
   });
 
   /*
