@@ -25,9 +25,13 @@ function hookUpDetectorEvents(detector) {
     image,
     timestamp
   ) {
+    console.log('frame');
     if (frames % 5 === 0) {
+      console.log('checking frame for faces');
       if (faces.length > 0) {
         ui.keepAlive();
+      } else {
+        console.log('no faces');
       }
     }
 
