@@ -5,3 +5,4 @@ Web app deployed at https://meet-mitsuku.moonshot.cloud/. Allows users to chat w
 ### Notes
 * Deployed via Dokku.
 * Chat with Mitsuku via `iframe` with express permission from Steve Worswick, Mitsuku's creator.
+* Press spacebar to go from `/` to `/chat`, and press `esc` or `←` to go from `/chat` to `/`.
