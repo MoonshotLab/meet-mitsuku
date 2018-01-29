@@ -18,7 +18,10 @@ function setupActivityWake() {
       if (window.location.pathname !== '/chat' && e.keyCode === 32) {
         // if spacebar on the main page, go to chat
         window.location.href = '/chat';
-      } else if (window.location.pathname === '/chat' && e.keyCode === 27) {
+      } else if (
+        window.location.pathname === '/chat' &&
+        (e.keyCode === 27 || e.keyCode === 37 || e.keyCode === 8)
+      ) {
         // if esc on chat, go to the main page
         window.location.href = '/';
       }
