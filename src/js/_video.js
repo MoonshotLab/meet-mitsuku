@@ -6,6 +6,19 @@ let detector;
 let detectorRunning = false;
 let frames = 0;
 
+const awakeFramesPerCheck = 50;
+const asleepFramesPerCheck = 5;
+
+let framesPerCheck = awakeFramesPerCheck;
+
+function setFramesPerCheck(awake = true) {
+  if (awake === true) {
+    framesPerCheck = awakeFramesPerCheck;
+  } else {
+    framesPerCheck = asleepFramesPerCheck;
+  }
+}
+
 function hookUpDetectorEvents(detector) {
   detector.addEventListener('onInitializeFailure', e => {
     console.log('initialize failure');
@@ -26,7 +39,7 @@ function hookUpDetectorEvents(detector) {
     timestamp
   ) {
     console.log('frame');
-    if (frames % 5 === 0) {
+    if (frames % framesPerCheck === 0) {
       console.log('checking frame for faces');
       if (faces.length > 0) {
         ui.keepAlive();
@@ -128,3 +141,4 @@ function asyncSetupCamera($cameraRoot) {
 exports.asyncSetupCamera = asyncSetupCamera;
 exports.startWatching = startWatching;
 exports.stopWatching = stopWatching;
+exports.setFramesPerCheck = setFramesPerCheck;
