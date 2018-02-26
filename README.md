@@ -3,7 +3,7 @@
 Web app deployed at https://meet-mitsuku.moonshot.cloud/. Allows users to chat with [Mitsuku](http://www.mitsuku.com/), 3-time winner of the [Loebner Prize](https://en.wikipedia.org/wiki/Loebner_Prize).
 
 ### Installation
-* `Meet Mitsuku` app is in `/automator`.
+* `Meet Mitsuku` Automator app in [Releases](https://github.com/MoonshotLab/meet-mitsuku/releases/download/1.0/Meet.Mitsuku.app.zip).
 * Depends on Chrome.
 * Chrome Kiosk will only open fullscreen and gain focus if no other Chrome windows are currently open. Otherwise it'll just be added as a tab to the most recently used window.
 
